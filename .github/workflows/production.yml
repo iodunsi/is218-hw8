@@ -40,7 +40,7 @@ jobs:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
 
       - name: Check DockerHub Token presence
-        run: if [ -z "$DOCKERHUB_TOKEN" ]; then echo "DOCKERHUB_TOKEN is not set"; else echo "DOCKERHUB_TOKEN is set"; fi
+        run: if [ -z "$DOCKERHUB_TOKEN" ]; then echo "DOCKERHUB_TOKEN is not set!"; else echo "DOCKERHUB_TOKEN is set"; fi
         env:
           DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
 
